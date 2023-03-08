@@ -19,7 +19,7 @@ int batteryPercentage(char* deviceName){
     if (gpioInitialise() < 0) return 1;
 
     //Connect to BLC
-    int BLC_Serial = serOpen(deviceName, BAUDRATE);
+    int BLC_Serial = serOpen(deviceName, BAUDRATE, 0);
 
     //Send request
     serWrite(BLC_Serial, request, sizeof(request));
