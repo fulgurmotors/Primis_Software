@@ -9,10 +9,10 @@ int main(void){
 
     char deviceName[] = "dev/tty/...";
 
-    batteryPercentage(deviceName);
+    int a = batteryPercentage(deviceName);
 }
 
-int batteryPercentage(string deviceName){
+int batteryPercentage(char[] deviceName){
 
     char request[] = "test";
 
@@ -20,10 +20,10 @@ int batteryPercentage(string deviceName){
     if (gpioInitialise() < 0) return 1;
 
     //Connect to BLC
-    int BLC_Serial = serOpen(deviceName.c_str(), BAUDRATE);
+    int BLC_Serial = serOpen(deviceName, BAUDRATE);
 
     //Send request
-    serWrite(BLC_Serial, request.c_str(), sizeof(request));
+    serWrite(BLC_Serial, request, sizeof(request));
 
     //Read answer
     while(serDataAvailable(BLC_Serial) < ANSWER_SIZE);
