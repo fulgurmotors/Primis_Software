@@ -6,14 +6,14 @@ using namespace std;
 
 int main(void){
 
-    char deviceName[] = "dev/tty/...";
+    char* deviceName = "dev/tty/...";
 
     int a = batteryPercentage(deviceName);
 }
 
-int batteryPercentage(char[] deviceName){
+int batteryPercentage(char* deviceName){
 
-    char request[] = "test";
+    char* request = "test";
 
     //Initialize gpio library
     if (gpioInitialise() < 0) return 1;
