@@ -14,5 +14,7 @@ main: $(SRC)main.cpp $(BUILDDIR) battery
 battery: $(SRC)$(BLC)battery.cpp
 	$(CC) -o $(BUILDDIR)$@.o $(SRC)$(BLC)$@.cpp
 
+.PHONY : clean
+
 clean:
-	rm -rf $(BUILDDIR)*.o
+	rm $(BUILDDIR)*.o
