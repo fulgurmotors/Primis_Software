@@ -1,6 +1,6 @@
 #include "battery.hpp"
 #include <cstdlib>
-#include <pigpio.h>
+#include <../../pigpio-master/pigpio.h>
 
 using namespace std;
 
