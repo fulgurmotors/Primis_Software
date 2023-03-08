@@ -7,7 +7,7 @@ using namespace std;
 
 int main(void){
 
-    string deviceName = "dev/tty/...";
+    std::string deviceName = "dev/tty/...";
 
     batteryPercentage(deviceName);
    
@@ -21,14 +21,14 @@ int batteryPercentage(string deviceName){
     if (gpioInitialise() < 0) return 1;
 
     //Connect to BLC
-    int BLC_Serial = serOpen(deviceName, BAUDRATE);
+    int BLC_Serial = serOpen(deviceName.c_str(), BAUDRATE);
 
     //Send request
-    serWrite(BLC_Serial, request, sizeof(request));
+    serWrite(BLC_Serial, request.c_str(), sizeof(request));
 
     //Read answer
     while(serDataAvailable < ANSWER_SIZE);
-    char* answer = malloc(ANSWER_SIZE * sizeof(char));
+    char* answer = (char*)malloc(ANSWER_SIZE * sizeof(char));
 
     serRead(BLC_Serial, answer, ANSWER_SIZE);
 
