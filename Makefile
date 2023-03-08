@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-W -Wall
+CFLAGS=-W -Wall  -pthread -lpigpio -lrt
 SRC=src/
 EXEC=main
 BUILDDIR = build/
