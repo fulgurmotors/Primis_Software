@@ -8,7 +8,7 @@ BLC = BLC/
 
 all: $(EXEC)
 
-main: $(SRC)main.cpp $(BUILDDIR) battery
+main: $(SRC)main.cpp battery
 	$(CC) -o $(BINDIR)$@ $(SRC)$@.cpp
  
 battery: $(SRC)$(BLC)battery.cpp
