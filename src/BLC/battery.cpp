@@ -6,13 +6,6 @@ extern "C" {
 
 using namespace std;
 
-int main(void){
-
-    char* deviceName = "dev/tty/...";
-
-    int a = batteryPercentage(deviceName);
-}
-
 int batteryPercentage(char* deviceName){
 
     char* request = "test";
