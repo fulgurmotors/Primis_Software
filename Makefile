@@ -13,7 +13,7 @@ main: $(SRC)main.cpp battery
 	$(CC) $(CFLAGS) -o $(BINDIR)$@ $(SRC)$@.cpp $(GPIOFLAGS)
  
 battery: $(SRC)$(BLC)battery.cpp
-	$(CC) $(CFLAGS) -o $(BUILDDIR)$@.o $(SRC)$(BLC)$@.cpp $(GPIOFLAGS)
+	$(CC) $(CFLAGS) -c -o $(BUILDDIR)$@.o $(SRC)$(BLC)$@.cpp $(GPIOFLAGS)
 
 .PHONY : clean
 
