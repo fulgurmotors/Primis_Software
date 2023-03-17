@@ -5,6 +5,8 @@ extern "C" {
 #include <pigpio.h>
 }
 
+using namespace std;
+
 int main(int argc, char* argv[]){
     char deviceName[] = "dev/tty/...";
 
