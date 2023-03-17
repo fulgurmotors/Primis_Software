@@ -8,7 +8,7 @@ using namespace std;
 
 int batteryPercentage(char* deviceName){
 
-    char* request = malloc(4 * sizeof(char));
+    char* request = (char*)malloc(4 * sizeof(char));
     request[0] = 't';
     request[1] = 'e';
     request[2] = 's';
