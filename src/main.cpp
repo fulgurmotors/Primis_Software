@@ -9,4 +9,6 @@ int main(int argc, char* argv[]){
     char deviceName[] = "dev/tty/...";
 
     int a = batteryPercentage(deviceName);
+
+    return 0;
 }
