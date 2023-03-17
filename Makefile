@@ -1,4 +1,4 @@
-CC=gcc
+CC=g++
 CFLAGS=-W -Wall -pthread 
 GPIOFLAGS = -lpigpio -lrt
 SRC=src/
