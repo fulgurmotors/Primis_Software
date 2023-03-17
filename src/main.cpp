@@ -4,7 +4,7 @@
 
 
 int main(int argc, char* argv[]){
-    har* deviceName = "dev/tty/...";
+    char* deviceName = "dev/tty/...";
 
     int a = batteryPercentage(deviceName);
 }
