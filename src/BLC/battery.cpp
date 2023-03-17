@@ -8,7 +8,7 @@ using namespace std;
 
 int batteryPercentage(char* deviceName){
 
-    char* request = "test";
+    char* request = {'t', 'e', 's' , 't'};
 
     //Initialize gpio library
     if (gpioInitialise() < 0) return 1;
