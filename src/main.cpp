@@ -8,7 +8,8 @@ extern "C" {
 using namespace std;
 
 int main(int argc, char* argv[]){
-    char deviceName[] = "dev/usb";
+
+    char deviceName[] = "dev/usb/hiddev0";
 
     int a = batteryPercentage(deviceName);
 
