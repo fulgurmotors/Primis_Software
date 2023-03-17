@@ -16,6 +16,10 @@ int batteryPercentage(char* deviceName){
     //Connect to BLC
     int BLC_Serial = serOpen(deviceName, BAUDRATE, 0);
 
+    if(BLC_Serial == PI_NO_HANDLE || BLC_Serial == PI_SER_OPEN_FAILED){
+        return SER_OPEN_FAILED;
+    }
+
     //Send request
     serWrite(BLC_Serial, request, sizeof(request));
 
