@@ -6,7 +6,7 @@ extern "C" {
 }
 
 int main(int argc, char* argv[]){
-    char* deviceName = "dev/tty/...";
+    char[] deviceName = "dev/tty/...";
 
     int a = batteryPercentage(deviceName);
 }
