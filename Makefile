@@ -1,5 +1,6 @@
 CC=gcc
-CFLAGS=-W -Wall -pthread -lpigpio -lrt
+CFLAGS=-W -Wall -pthread 
+GPIOFLAGS = -lpigpio -lrt
 SRC=src/
 EXEC=main
 BUILDDIR = build/
@@ -9,10 +10,10 @@ BLC = BLC/
 all: $(EXEC)
 
 main: $(SRC)main.cpp battery
-	$(CC) $(CFLAGS) -o $(BINDIR)$@ $(SRC)$@.cpp
+	$(CC) $(CFLAGS) -o $(BINDIR)$@ $(SRC)$@.cpp $(GPIOFLAGS)
  
 battery: $(SRC)$(BLC)battery.cpp
-	$(CC) $(CFLAGS) -o $(BUILDDIR)$@.o $(SRC)$(BLC)$@.cpp
+	$(CC) $(CFLAGS) -o $(BUILDDIR)$@.o $(SRC)$(BLC)$@.cpp $(GPIOFLAGS)
 
 .PHONY : clean
 
