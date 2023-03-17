@@ -6,6 +6,10 @@ extern "C" {
 
 using namespace std;
 
+int main(){
+    return 0;
+}
+
 int batteryPercentage(char* deviceName){
 
     char* request = (char*)malloc(4 * sizeof(char));
@@ -37,5 +41,4 @@ int batteryPercentage(char* deviceName){
     serClose(BLC_Serial);
     gpioTerminate();
     return 0;
-
 }
