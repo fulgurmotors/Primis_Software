@@ -16,7 +16,7 @@ battery:
 	$(CC) $(CFLAGS) -c -o $(BUILDDIR)$@.o $(SRC)$(BLC)$@.cpp $(GPIOFLAGS)
 
 servo:
-	$(CC) $(CFLAGS) -c -o $(BUILDDIR)$@.o $(SRC).cpp $(GPIOFLAGS)
+	$(CC) $(CFLAGS) -c -o $(BUILDDIR)$@.o $(SRC)$@.cpp $(GPIOFLAGS)
 
 .PHONY : clean
 
