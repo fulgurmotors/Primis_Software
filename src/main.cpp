@@ -29,7 +29,7 @@ int main(int argc, char* argv[]){
         if(angle == 255) monte = 0;
         if(angle == 0) monte = 1;    
         gpioPWM(12,angle);
-        sleepfor(milliseconds(50));
+        sleep_for(milliseconds(50));
     }
     return 0;
 }
