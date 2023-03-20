@@ -9,6 +9,8 @@ extern "C" {
 }
 
 using namespace std;
+using namespace std::this_thread; // sleep_for, sleep_until
+using namespace std::chrono; // nanoseconds, system_clock, seconds
 
 int main(int argc, char* argv[]){
 
@@ -26,8 +28,7 @@ int main(int argc, char* argv[]){
         else angle--;
         if(angle == 255) monte = 0;
         if(angle == 0) monte = 1;    
-        gpioPWN(12,angle);
-        delay(15);
+        gpioPWM(12,angle);
         sleepfor(milliseconds(50));
     }
     return 0;
