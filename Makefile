@@ -9,7 +9,7 @@ BLC = BLC/
 
 all: $(EXEC)
 
-main: $(SRC)battery servo
+main: battery servo
 	$(CC) $(CFLAGS) -o $(BINDIR)$@ $(SRC)$@.cpp $(BUILDDIR)battery.o $(BUILDDIR)servo.o $(GPIOFLAGS)
  
 battery:
