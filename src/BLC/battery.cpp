@@ -9,9 +9,6 @@ using namespace std;
 int batteryPercentage(char* deviceName){
 
     char request[] = "test";
-    
-    //Initialize gpio library
-    if (gpioInitialise() < 0) return 1;
 
     //Connect to BLC
     int BLC_Serial = serOpen(deviceName, BAUDRATE, 0);
