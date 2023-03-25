@@ -1,4 +1,7 @@
 #include<iostream>
+#include <chrono>
+#include <thread>
+
 #include "main.hpp"
 #include "BLC/battery.hpp"
 #include "servo.hpp"
@@ -7,11 +10,14 @@ extern "C" {
 }
 
 using namespace std;
+using namespace std::this_thread; // sleep_for, sleep_until
+using namespace std::chrono; // nanoseconds, system_clock, seconds
 
 float raspberryPiCPUTemperature();
 
 int main(int argc, char* argv[]){
 
+<<<<<<< HEAD
 
     if (initServo() <0) {
         cout << "Failed to initialise servo" << endl;
@@ -30,7 +36,22 @@ int main(int argc, char* argv[]){
     //int a = batteryPercentage(deviceName);
 
     cout << raspberryPiCPUTemperature << endl;
+=======
 
+    if (gpioInitialise() < 0) return 1;
+
+    //char deviceName[] = "dev/usb/hiddev0";
+
+    //int a = batteryPercentage(deviceName);
+>>>>>>> master
+
+    while(true){
+        gpioPWM(12,0);
+        sleep_for(milliseconds(10000));
+        
+        gpioPWM(12,255);
+        sleep_for(milliseconds(10000));
+    }
     return 0;
 }
 
