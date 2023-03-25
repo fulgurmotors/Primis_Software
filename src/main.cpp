@@ -19,7 +19,7 @@ using namespace std::chrono; // nanoseconds, system_clock, seconds
 float raspberryPiCPUTemperature();
 
 int main(int argc, char* argv[]){
-
+/*
     if (initServo() <0) {
         cout << "Failed to initialise servo" << endl;
         return 1;
@@ -29,6 +29,8 @@ int main(int argc, char* argv[]){
         cout << "Failed to initialise PIGPIO" << endl;
         return 1;
     }
+*/
+    
 
     char deviceName[] = "dev/usb/hiddev0";
 
