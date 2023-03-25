@@ -38,7 +38,7 @@ int main(int argc, char* argv[]){
 
     //int a = batteryPercentage(deviceName);
 
-    cout << raspberryPiCPUTemperature << endl;
+    cout << raspberryPiCPUTemperature() << endl;
 
     /*
     while(true){
