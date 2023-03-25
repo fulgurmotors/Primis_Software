@@ -3,6 +3,7 @@
 #include <thread>
 #include <sstream>
 #include <cmath>
+#include <fstream> 
 
 #include "main.hpp"
 #include "BLC/battery.hpp"
