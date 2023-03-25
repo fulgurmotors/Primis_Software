@@ -17,8 +17,6 @@ float raspberryPiCPUTemperature();
 
 int main(int argc, char* argv[]){
 
-<<<<<<< HEAD
-
     if (initServo() <0) {
         cout << "Failed to initialise servo" << endl;
         return 1;
@@ -36,15 +34,8 @@ int main(int argc, char* argv[]){
     //int a = batteryPercentage(deviceName);
 
     cout << raspberryPiCPUTemperature << endl;
-=======
 
-    if (gpioInitialise() < 0) return 1;
-
-    //char deviceName[] = "dev/usb/hiddev0";
-
-    //int a = batteryPercentage(deviceName);
->>>>>>> master
-
+    /*
     while(true){
         gpioPWM(12,0);
         sleep_for(milliseconds(10000));
@@ -52,6 +43,7 @@ int main(int argc, char* argv[]){
         gpioPWM(12,255);
         sleep_for(milliseconds(10000));
     }
+    */
     return 0;
 }
 
