@@ -65,7 +65,7 @@ float raspberryPiCPUTemperature(){
     piCpuTemp = piCpuTemp / 1000; // convert float value to degree
     piCpuTemp = roundf(piCpuTemp * 100) / 100; // round decimal to nearest
 
-    return piCPUTemp;
+    return piCpuTemp;
 }
 
 void fanControle(){
