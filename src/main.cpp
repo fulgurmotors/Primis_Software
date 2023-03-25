@@ -1,6 +1,8 @@
 #include<iostream>
 #include <chrono>
 #include <thread>
+#include <sstream>
+#include <cmath>
 
 #include "main.hpp"
 #include "BLC/battery.hpp"
