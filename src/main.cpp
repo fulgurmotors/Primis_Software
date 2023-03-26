@@ -19,28 +19,27 @@ using namespace std::chrono; // nanoseconds, system_clock, seconds
 float raspberryPiCPUTemperature();
 
 int main(int argc, char* argv[]){
-/*
+
+    char deviceName[] = "dev/usb/hiddev0";
+
+
+    #ifndef DEBUG
     if (initServo() <0) {
         cout << "Failed to initialise servo" << endl;
         return 1;
     }
+    #endif
 
+    //Initialize gpio library
     if (gpioInitialise() < 0) {
         cout << "Failed to initialise PIGPIO" << endl;
         return 1;
     }
-*/
-    
 
-    char deviceName[] = "dev/usb/hiddev0";
-
-    //Initialize gpio library
-
-    //int a = batteryPercentage(deviceName);
+    cout << batteryPercentage(deviceName) << endls;
 
     cout << raspberryPiCPUTemperature() << endl;
 
-    /*
     while(true){
         gpioPWM(12,0);
         sleep_for(milliseconds(10000));
@@ -48,7 +47,6 @@ int main(int argc, char* argv[]){
         gpioPWM(12,255);
         sleep_for(milliseconds(10000));
     }
-    */
     return 0;
 }
 
