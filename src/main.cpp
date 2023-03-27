@@ -26,15 +26,15 @@ int main(int argc, char* argv[]){
     #ifndef DEBUG
     //Initialize gpio library
     if (gpioInitialise() < 0) {
-        cout << "Failed to initialise PIGPIO" << endl;
+        std::cout << "Failed to initialise PIGPIO" << endl;
         return 1;
     }
     #endif
-    cout << "PIGPIO Initialized" << endl;
+    std::cout << "PIGPIO Initialized" << endl;
     
 
     if (initServo() <0) {
-        cout << "Failed to initialise servo" << endl;
+        std::cout << "Failed to initialise servo" << endl;
         return 1;
     }
     
@@ -42,9 +42,9 @@ int main(int argc, char* argv[]){
     while(true){
 
         //Check Sensors
-        cout << batteryPercentage(deviceName) << endls;
+        std::cout << batteryPercentage(deviceName) << std::endl;
 
-        cout << raspberryPiCPUTemperature() << endl;
+        std::cout << raspberryPiCPUTemperature() << std::endl;
 
 
         //Receive Controls
