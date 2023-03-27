@@ -1,8 +1,9 @@
 #include "servo.hpp"
 #include "main.hpp"
 
-
+#include <iostream>
 #include <cstdlib>
+
 extern "C" {
 #include <pigpio.h>
 }
