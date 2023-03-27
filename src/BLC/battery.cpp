@@ -3,6 +3,8 @@
 
 
 #include <cstdlib>
+#include <iostream>
+
 extern "C" {
 #include <pigpio.h>
 }
