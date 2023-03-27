@@ -46,14 +46,13 @@ int main(int argc, char* argv[]){
 
         std::cout << raspberryPiCPUTemperature() << std::endl;
 
-
         //Receive Controls
 
         //Controls
-        gpioPWM(12,0);
+        setServoAngle(0);
         sleep_for(milliseconds(10000));
         
-        gpioPWM(12,255);
+        setServoAngle(180);
         sleep_for(milliseconds(10000));
     }
     return 0;
