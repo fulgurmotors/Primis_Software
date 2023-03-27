@@ -4,6 +4,7 @@
 
 #define PWN_SERVO_FREQUENCY 50
 
+int initServo();
 int setServoAngle(double angle);
 
 #endif
