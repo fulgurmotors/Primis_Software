@@ -24,23 +24,32 @@ int main(int argc, char* argv[]){
 
 
     #ifndef DEBUG
-    if (initServo() <0) {
-        cout << "Failed to initialise servo" << endl;
-        return 1;
-    }
-    #endif
-
     //Initialize gpio library
     if (gpioInitialise() < 0) {
         cout << "Failed to initialise PIGPIO" << endl;
         return 1;
     }
+    #endif
+    cout << "PIGPIO Initialized" << endl;
+    
 
-    cout << batteryPercentage(deviceName) << endls;
-
-    cout << raspberryPiCPUTemperature() << endl;
+    if (initServo() <0) {
+        cout << "Failed to initialise servo" << endl;
+        return 1;
+    }
+    
 
     while(true){
+
+        //Check Sensors
+        cout << batteryPercentage(deviceName) << endls;
+
+        cout << raspberryPiCPUTemperature() << endl;
+
+
+        //Receive Controls
+
+        //Controls
         gpioPWM(12,0);
         sleep_for(milliseconds(10000));
         
