@@ -14,7 +14,6 @@ using namespace std;
 int batteryPercentage(char* deviceName){
 
     #ifdef DEBUG
-        cout << "Called Battery Percentage" << endl;
         return 15;
     #endif
 

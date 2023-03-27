@@ -42,9 +42,9 @@ int main(int argc, char* argv[]){
     while(true){
 
         //Check Sensors
-        std::cout << batteryPercentage(deviceName) << std::endl;
+        std::cout << "Battery : " << batteryPercentage(deviceName) << "%" << std::endl;
 
-        std::cout << raspberryPiCPUTemperature() << std::endl;
+        std::cout << "CPU Temp : " << raspberryPiCPUTemperature() << "°C" << std::endl;
 
         //Receive Controls
 
