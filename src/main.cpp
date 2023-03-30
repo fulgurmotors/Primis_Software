@@ -32,13 +32,7 @@ int main(int argc, char* argv[]){
     #endif
     std::cout << "PIGPIO Initialized" << endl;
     
-
-    if (initServo() <0) {
-        std::cout << "Failed to initialise servo" << endl;
-        return 1;
-    }
-    
-
+    int handle = initServo();
 
     int i = 0;
     while(true){
@@ -53,7 +47,7 @@ int main(int argc, char* argv[]){
         //Controls
 
 
-        setServoAngle(i);
+        setServoAngle(i, handle);
         i++;
         if (i == 180) i = 0;
         sleep_for(milliseconds(50));

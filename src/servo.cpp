@@ -27,10 +27,12 @@ int initServo(){
 
     if(pwm == PI_BAD_USER_GPIO || pwm == PI_BAD_DUTYCYCLE) return -1;
 
+    return pwm;
+
     #endif
 }
 
-int setServoAngle(double angle){
+int setServoAngle(double angle, int handle){
 
     #ifdef DEBUG
         cout << "set Servo to " << angle << endl;
@@ -41,7 +43,7 @@ int setServoAngle(double angle){
 
     unsigned int pulse = (unsigned int) angle * 255 / 180;
 
-    gpioPWM(SERVO_PIN, pulse);
+    gpioPWM(handle, pulse);
 
     return 0;
 
