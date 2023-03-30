@@ -42,12 +42,12 @@ int main(int argc, char* argv[]){
 
         std::cout << "CPU Temp : " << raspberryPiCPUTemperature() << "°C" << std::endl;
 
-        string input;
+       /* string input;
         
         cout << "Entrer valeur" << endl;
-        cin >> input;
+        cin >> input;*/
         
-        int inputint = std::stoi(input);
+        int inputint = std::stoi(i);
 
         //Receive Controls
 
