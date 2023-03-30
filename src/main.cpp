@@ -42,19 +42,19 @@ int main(int argc, char* argv[]){
 
         std::cout << "CPU Temp : " << raspberryPiCPUTemperature() << "°C" << std::endl;
 
-       /* string input;
+        string input;
         
         cout << "Entrer valeur" << endl;
-        cin >> input;*/
+        cin >> input;
         
-        //int inputint = std::stoi(i);
+        int inputint = std::stoi(i);
 
         //Receive Controls
 
         //Controls
 
 
-        setServoAngle(i);
+        setServoAngle(inputint);
         i++;
         if (i == 180) i = 0;
         sleep_for(milliseconds(20));
