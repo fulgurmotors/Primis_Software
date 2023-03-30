@@ -50,7 +50,7 @@ int main(int argc, char* argv[]){
         setServoAngle(i);
         i++;
         if (i == 180) i = 0;
-        sleep_for(milliseconds(100));
+        sleep_for(milliseconds(20));
     }
     return 0;
 }
