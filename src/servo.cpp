@@ -41,7 +41,7 @@ int setServoAngle(double angle){
 
     #ifndef DEBUG
 
-    unsigned int pulse = (unsigned int) (angle * 255) / 180.0;
+    unsigned int pulse = (unsigned int) 42 + ((angle * 255) / 180.0) *0.82;
     cout << pulse << endl;
     gpioPWM(SERVO_PIN, pulse);
 
