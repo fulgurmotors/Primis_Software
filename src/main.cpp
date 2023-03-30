@@ -47,7 +47,7 @@ int main(int argc, char* argv[]){
         cout << "Entrer valeur" << endl;
         cin >> input;
         
-        int inputint = std::stoi(i);
+        int inputint = std::stoi(input);
 
         //Receive Controls
 
