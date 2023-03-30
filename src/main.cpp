@@ -33,7 +33,7 @@ int main(int argc, char* argv[]){
     std::cout << "PIGPIO Initialized" << endl;
     
     int handle = initServo();
-
+    
     int i = 0;
     while(true){
 
