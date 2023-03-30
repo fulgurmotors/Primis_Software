@@ -39,9 +39,8 @@ int main(int argc, char* argv[]){
     }
     
 
-    setServoAngle(0);
-    setServoAngle(180);
 
+    int i = 0;
     while(true){
 
         //Check Sensors
@@ -54,8 +53,11 @@ int main(int argc, char* argv[]){
         //Controls
 
 
-
-        sleep_for(milliseconds(1000));
+        setServoAngle(i);
+        i++;
+        if (i == 180) i = 0;
+        sleep_for(milliseconds(50));
+        ²
     }
     return 0;
 }

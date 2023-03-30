@@ -1,6 +1,6 @@
 #ifndef _MAIN
 #define _MAIN
 
-#define DEBUG
+//#define DEBUG
 // your code
 #endif
