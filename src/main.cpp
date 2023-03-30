@@ -54,7 +54,7 @@ int main(int argc, char* argv[]){
         //Controls
 
 
-        setServoAngle(inputint);
+        setServoAngle(i);
         i++;
         if (i == 180) i = 0;
         sleep_for(milliseconds(20));
