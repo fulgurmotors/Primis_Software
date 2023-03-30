@@ -57,7 +57,6 @@ int main(int argc, char* argv[]){
         i++;
         if (i == 180) i = 0;
         sleep_for(milliseconds(50));
-        ²
     }
     return 0;
 }
