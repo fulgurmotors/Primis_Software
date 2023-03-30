@@ -38,7 +38,7 @@ int main(int argc, char* argv[]){
     while(true){
 
         //Check Sensors
-        std::cout << "Battery : " << batteryPercentage(deviceName) << "%" << std::endl;
+       //std::cout << "Battery : " << batteryPercentage(deviceName) << "%" << std::endl;
 
         std::cout << "CPU Temp : " << raspberryPiCPUTemperature() << "°C" << std::endl;
 
@@ -47,7 +47,7 @@ int main(int argc, char* argv[]){
         //Controls
 
 
-        setServoAngle(i, handle);
+        setServoAngle(i);
         i++;
         if (i == 180) i = 0;
         sleep_for(milliseconds(50));
