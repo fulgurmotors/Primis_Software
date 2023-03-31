@@ -4,8 +4,8 @@
 
 #define PWN_SERVO_FREQUENCY 330
 
-#define MAX_SERVO_DUTYCYCLE 224
-#define MIN_SERVO_DUTYCYCLE 30
+#define MAX_SERVO_DUTYCYCLE 2500
+#define MIN_SERVO_DUTYCYCLE 500
 
 int initServo();
 int setServoAngle(double angle);
