@@ -20,9 +20,6 @@ float raspberryPiCPUTemperature();
 
 int main(int argc, char* argv[]){
 
-    char deviceName[] = "dev/usb/hiddev0";
-
-
     #ifndef DEBUG
     //Initialize gpio library
     if (gpioInitialise() < 0) {
@@ -73,7 +70,6 @@ int main(int argc, char* argv[]){
         //Receive Controls
 
         //Controls
-
 
         setServoAngle(inputint);
         i++;
