@@ -1,5 +1,10 @@
 #include "battery.hpp"
+#include "../main.hpp"
+
+
 #include <cstdlib>
+#include <iostream>
+
 extern "C" {
 #include <pigpio.h>
 }
@@ -8,10 +13,12 @@ using namespace std;
 
 int batteryPercentage(char* deviceName){
 
+    #ifdef DEBUG
+        return 15;
+    #endif
+
+    #ifndef DEBUG
     char request[] = "test";
-    
-    //Initialize gpio library
-    if (gpioInitialise() < 0) return 1;
 
     //Connect to BLC
     int BLC_Serial = serOpen(deviceName, BAUDRATE, 0);
@@ -37,4 +44,6 @@ int batteryPercentage(char* deviceName){
     serClose(BLC_Serial);
     gpioTerminate();
     return 0;
+    #endif
+    
 }
