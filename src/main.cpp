@@ -17,7 +17,24 @@ int main(int argc, char* argv[]){
 
     if (gpioInitialise() < 0) return 1;
 
-    //char deviceName[] = "dev/usb/hiddev0";
+    char deviceName[] = "dev/ttyS0";
+
+
+    int BLC_Handle = serOpen(deviceName, 9600, 0);
+
+
+    char c = 1+4;
+    serWriteByte(BLC_Handle, c);
+    sleep_for(milliseconds(1000));
+
+    c = 4;
+    serWriteByte(BLC_Handle, c);
+    sleep_for(milliseconds(1000));
+
+
+    serClose(BLC_Handle);
+
+
 
     //int a = batteryPercentage(deviceName);
 
