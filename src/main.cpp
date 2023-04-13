@@ -7,7 +7,10 @@
 
 #include "main.hpp"
 #include "BLC/battery.hpp"
+#include "BLC/light.hpp"
 #include "servo.hpp"
+
+
 extern "C" {
 #include <pigpio.h>
 }
@@ -37,15 +40,14 @@ int main(int argc, char* argv[]){
 
     int BLC_Handle = serOpen(deviceName, 9600, 0);
 
-
-    char c = 1+4;
-    serWriteByte(BLC_Handle, c);
+    setHeadLight(1); 
+    setTurnSignalLight(1);
     sleep_for(milliseconds(1000));
-
-    c = 4;
-    serWriteByte(BLC_Handle, c);
+    setTurnSignalLight(2);
     sleep_for(milliseconds(1000));
-
+    setTurnSignalLight(3);
+    sleep_for(milliseconds(1000));
+    setTurnSignalLight(0);
 
     serClose(BLC_Handle);
 
