@@ -53,29 +53,29 @@ int main(int argc, char* argv[]){
 
     //int a = batteryPercentage(deviceName);
 
-    while(true){
+    //while(true){
 
-        //Check Sensors
-       //std::cout << "Battery : " << batteryPercentage(deviceName) << "%" << std::endl;
+    //    //Check Sensors
+    //   //std::cout << "Battery : " << batteryPercentage(deviceName) << "%" << std::endl;
 
-        std::cout << "CPU Temp : " << raspberryPiCPUTemperature() << "°C" << std::endl;
+    //    std::cout << "CPU Temp : " << raspberryPiCPUTemperature() << "°C" << std::endl;
 
-        string input;
-        
-        cout << "Entrer valeur" << endl;
-        cin >> input;
-        
-        int inputint = std::stoi(input);
+    //    string input;
+    //    
+    //    cout << "Entrer valeur" << endl;
+    //    cin >> input;
+    //    
+    //    int inputint = std::stoi(input);
 
-        //Receive Controls
+    //    //Receive Controls
 
-        //Controls
+    //    //Controls
 
-        setServoAngle(inputint);
-        i++;
-        if (i == 180) i = 0;
-        sleep_for(milliseconds(20));
-    }
+    //    setServoAngle(inputint);
+    //    i++;
+    //    if (i == 180) i = 0;
+    //    sleep_for(milliseconds(20));
+    //}
     return 0;
 }
 
