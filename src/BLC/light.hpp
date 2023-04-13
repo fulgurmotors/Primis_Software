@@ -6,10 +6,10 @@
 #define REVERSE 8
 #define HEADLIGHT 16
 
-void setTurnSignalLight(char state);
-void setBrakeLight(char state);
-void setReverseLight(char state);
-void setHeadLight(char state);
+void setTurnSignalLight(int handle, char state);
+void setBrakeLight(int handle, char state);
+void setReverseLight(int handle, char state);
+void setHeadLight(int handle, char state);
 
 
 #endif

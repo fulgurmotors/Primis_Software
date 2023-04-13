@@ -3,18 +3,18 @@ extern "C" {
 #include <pigpio.h>
 }
 
-void setTurnSignalLight(char state){ // 0 = off, 1 = gauche, 2 = droite, 3 = warning
-    serWriteByte(BLC_Handle, state + TURNSIGNAL);
+void setTurnSignalLight(int handle, char state){ // 0 = off, 1 = gauche, 2 = droite, 3 = warning
+    serWriteByte(handle, state + TURNSIGNAL);
 }
 
-void setBrakeLight(char state){ // 0 = off, 1 = on
-    serWriteByte(BLC_Handle, state + BRAKES);
+void setBrakeLight(int handle, char state){ // 0 = off, 1 = on
+    serWriteByte(handle, state + BRAKES);
 }
 
-void setReverseLight(char state){ // 0 = off, 1 = on
-    serWriteByte(BLC_Handle, state + REVERSE);
+void setReverseLight(int handle, char state){ // 0 = off, 1 = on
+    serWriteByte(handle, state + REVERSE);
 }
 
-void setHeadLight(char state){ // 0 = off, 1 = on
-    serWriteByte(BLC_Handle, state + HEADLIGHT);
+void setHeadLight(int handle, char state){ // 0 = off, 1 = on
+    serWriteByte(handle, state + HEADLIGHT);
 }

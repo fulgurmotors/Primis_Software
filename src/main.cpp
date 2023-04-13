@@ -40,13 +40,13 @@ int main(int argc, char* argv[]){
     int BLC_Handle = serOpen(deviceName, 9600, 0);
 
     setHeadLight((char)1); 
-    setTurnSignalLight((char)1);
+    setTurnSignalLight(BLC_Handle,1);
     sleep_for(milliseconds(1000));
-    setTurnSignalLight((char)2);
+    setTurnSignalLight(BLC_Handle,2);
     sleep_for(milliseconds(1000));
-    setTurnSignalLight((char)3);
+    setTurnSignalLight(BLC_Handle,3);
     sleep_for(milliseconds(1000));
-    setTurnSignalLight((char)0);
+    setTurnSignalLight(BLC_Handle,0);
 
     serClose(BLC_Handle);
 
