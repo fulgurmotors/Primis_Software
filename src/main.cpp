@@ -32,11 +32,13 @@ int main(int argc, char* argv[]){
     int handle = initServo();
     
     int i = 0;
-    char deviceName[] = "dev/ttyS0";
+    char deviceName[] = "/dev/ttyS0";
 
 
     int BLC_Handle = serOpen(deviceName, 9600, 0);
 
+
+    cout << BLC_Handle << endl;
 
     char c = 1+4;
     serWriteByte(BLC_Handle, c);
