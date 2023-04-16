@@ -47,6 +47,10 @@ int main(int argc, char* argv[]){
     setTurnSignalLight(BLC_Handle,3);
     sleep_for(milliseconds(1000));
     setTurnSignalLight(BLC_Handle,0);
+    sleep_for(milliseconds(1000));
+    setHeadLight(BLC_Handle, 0);
+
+
 
     serClose(BLC_Handle);
 
