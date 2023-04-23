@@ -39,6 +39,7 @@ int main(int argc, char* argv[]){
 
     int BLC_Handle = serOpen(deviceName, 9600, 0);
 
+    /*
     setHeadLight(BLC_Handle, 1); 
     setTurnSignalLight(BLC_Handle,1);
     sleep_for(milliseconds(1000));
@@ -50,8 +51,8 @@ int main(int argc, char* argv[]){
     setHeadLight(BLC_Handle, 0);
     setReverseLight(BLC_Handle, 1);
     sleep_for(milliseconds(1000));
-    setReverseLight(BLC_Handle, 0);
-
+    setReverseLight(BLC_Handle, 0);*/
+    setTurnSignalLight(BLC_Handle,1);
     serClose(BLC_Handle);
 
 
