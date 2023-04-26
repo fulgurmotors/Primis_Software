@@ -36,7 +36,7 @@ using namespace std::chrono; // nanoseconds, system_clock, seconds
 float raspberryPiCPUTemperature();
 void lightDemo(int BLC_Handle);
 
-int main(int argc, char* argv[]){
+int main(){
 
     //Initialize gpio library
     if (gpioInitialise() < 0) {
@@ -46,8 +46,8 @@ int main(int argc, char* argv[]){
     std::cout << "PIGPIO Initialized" << endl;
     
     //Initialize servo
-    int servoHandle = initServo();
-    
+    //int servoHandle = initServo();
+
     //Initialize serial connection to BLC
     char deviceName[] = "/dev/ttyS0";
     int BLC_Handle = serOpen(deviceName, 9600, 0);
