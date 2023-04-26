@@ -11,8 +11,10 @@ using namespace std;
 
 int batteryPercentage(int handle){
 
+
+    char * request = "";
     //Send request
-    serWrite(handle, "", sizeof(""));
+    serWrite(handle, request, sizeof(request));
 
     //Read answer
     while(serDataAvailable(handle) < ANSWER_SIZE);
