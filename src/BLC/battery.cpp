@@ -11,8 +11,7 @@ using namespace std;
 
 int batteryPercentage(int handle){
 
-
-    char * request = "";
+    char * request = (char*)malloc(REQUEST_SIZE * sizeof(char));
     //Send request
     serWrite(handle, request, sizeof(request));
 
