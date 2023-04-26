@@ -1,6 +1,4 @@
 #include "battery.hpp"
-#include "../main.hpp"
-
 
 #include <cstdlib>
 #include <iostream>
