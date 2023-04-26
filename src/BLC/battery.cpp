@@ -7,6 +7,8 @@ extern "C" {
 #include <pigpio.h>
 }
 
+#define REQUEST_SIZE 15
+
 using namespace std;
 
 int batteryPercentage(int handle){
