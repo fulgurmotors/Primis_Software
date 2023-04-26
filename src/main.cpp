@@ -54,6 +54,7 @@ int main(int argc, char* argv[]){
         return SER_OPEN_FAILED;
     }
 
+<<<<<<< HEAD
     //Initialize connection socket
     int port = 1242;
     sockaddr_in servAddr;
@@ -95,6 +96,22 @@ int main(int argc, char* argv[]){
 
     lightDemo(BLC_Handle);
 
+=======
+    /*
+    setHeadLight(BLC_Handle, 1); 
+    setTurnSignalLight(BLC_Handle,1);
+    sleep_for(milliseconds(1000));
+    setTurnSignalLight(BLC_Handle,2);
+    sleep_for(milliseconds(1000));
+    setTurnSignalLight(BLC_Handle,3);
+    sleep_for(milliseconds(1000));
+    setTurnSignalLight(BLC_Handle,0);
+    setHeadLight(BLC_Handle, 0);
+    setReverseLight(BLC_Handle, 1);
+    sleep_for(milliseconds(1000));
+    setReverseLight(BLC_Handle, 0);*/
+    setTurnSignalLight(BLC_Handle,1);
+>>>>>>> master
     serClose(BLC_Handle);
 
     return 0;
