@@ -11,21 +11,7 @@ extern "C" {
 
 using namespace std;
 
-int batteryPercentage(char* deviceName){
-
-    #ifdef DEBUG
-        return 15;
-    #endif
-
-    #ifndef DEBUG
-    char request[] = "test";
-
-    //Connect to BLC
-    int BLC_Serial = serOpen(deviceName, BAUDRATE, 0);
-
-    if(BLC_Serial == PI_NO_HANDLE || BLC_Serial == PI_SER_OPEN_FAILED){
-        return SER_OPEN_FAILED;
-    }
+int batteryPercentage(int handle){
 
     //Send request
     serWrite(BLC_Serial, request, sizeof(request));
@@ -44,6 +30,5 @@ int batteryPercentage(char* deviceName){
     serClose(BLC_Serial);
     gpioTerminate();
     return 0;
-    #endif
     
 }
