@@ -1,4 +1,11 @@
 #include "light.hpp"
+
+//Include the necessary libraries for sleep_for and milliseconds
+#include <chrono>
+#include <thread>
+using namespace std::this_thread; // sleep_for, sleep_until
+using namespace std::chrono; // nanoseconds, system_clock, seconds
+
 extern "C" {
 #include <pigpio.h>
 }
