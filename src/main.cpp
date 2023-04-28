@@ -5,6 +5,7 @@
 #include "BLC/light.hpp"
 #include "servo.hpp"
 #include "tools.hpp"
+#include "network.hpp"
 
 
 extern "C" {
