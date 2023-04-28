@@ -10,6 +10,6 @@ void setTurnSignalLight(int handle, char state);
 void setBrakeLight(int handle, char state);
 void setReverseLight(int handle, char state);
 void setHeadLight(int handle, char state);
-
+void lightDemo(int handle);
 
 #endif
