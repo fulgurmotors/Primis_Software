@@ -24,7 +24,7 @@
 
 using namespace std;
 
-void func(){
+void connect(){
     sockaddr_in servAddr;
     bzero((char*)&servAddr, sizeof(servAddr));
     servAddr.sin_family = AF_INET;
@@ -37,7 +37,7 @@ void func(){
         cerr << "Error establishing the server socket" << endl;
         exit(0);
     }
-    
+
     //bind the socket to its local address
     int bindStatus = bind(serverSd, (struct sockaddr*) &servAddr, sizeof(servAddr));
     if(bindStatus < 0)

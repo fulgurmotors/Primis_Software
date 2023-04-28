@@ -35,7 +35,10 @@ int main(){
         return SER_OPEN_FAILED;
     }
     std::cout << "Serial connection to BLC initialized" << endl;
-    
+
+
+    connect();
+
     lightDemo(BLC_Handle);
 
     serClose(BLC_Handle);
